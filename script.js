@@ -55,7 +55,7 @@ let tilfeldigNummer = [1337, 8085];
 //Her har vi konstantert at oddetall er 1,3,5,7 og 9.
 console.log(oddeTall);
 
-//Her henviser vi til tallene 1337 og 80085, som kan endres på men nå skrives som dem står ovenfor i konsollen.
+//Her henviser vi til tallene 1337 og 8085, som kan endres på men nå skrives som dem står ovenfor i konsollen.
 console.log(tilfeldigNummer);
 
 //Her plukker vi spesifikt ut oddetallene 3 og 7.
@@ -110,4 +110,66 @@ console.log(counter);
 //Til slutt deler vi 20 med 3 som gir oss  6.666666666666667
 counter /= 3;
 console.log(counter);
-/******************************************************************************/
+
+/******************************************************************************
+
+OPPGAVE 4
+
+Skriv en IF/ELSE-betingelse som sjekker følgende:
+1. At userName ikke er tom ("").
+2. At userAge er 18 eller eldre.
+3. At userIsBlocked er false.
+
+(TIPS: Bruk && (logisk OG) for å sjekke alle tre betingelsene i én IF-setning.)
+
+- Hvis alle disse betingelsene er oppfylt, skal du sette variabelen
+userIsLoggedIn til true og goToPage til "/home". Deretter skriver du ut en 
+velkomstmelding med console.log.
+
+- Hvis noen av betingelsene IKKE er oppfylt, skal du skrive ut en feilmelding
+med console.log.
+
+Prøv å endre verdiene på variablene for å sikre at IF/ELSE-setningen din 
+håndterer alle tilfeller korrekt.
+******************************************************************************/
+
+let userName = "Loketor";
+let userAge = 18;
+let userIsLoggedIn = true;
+let userIsBlocked = false;
+let goToPage = "/";
+
+if (userName === "" || userAge < 18 || userIsBlocked === true) {
+  console.log("Error");
+} else if (
+  (userName =
+    "Loketor" &&
+    userAge >= 18 &&
+    userIsLoggedIn === true &&
+    userIsBlocked === false)
+) {
+  console.log("You are logged in!");
+  goToPage = "/home";
+}
+
+/******************************************************************************
+OPPGAVE 5
+
+Lag en variabel kalt userTitle og sett innholdet til å være:
+- "Mr." hvis userMale er true, eller
+- "Mrs." hvis userMale er false.
+
+Bruk en ternary conditional for dette:
+
+const variabel = betingelse ? "hvis sann" : "hvis usann";
+
+Prøv å endre userMale til både true og false og bruk console.log for å sjekke
+at betingelsen din fungerer som den skal.
+******************************************************************************/
+
+const userMale = true;
+
+// Skriv koden for oppgave 5 her
+
+const userTitle = userMale ? "Mr." : "Mrs.";
+console.log("The user is:", userTitle);
