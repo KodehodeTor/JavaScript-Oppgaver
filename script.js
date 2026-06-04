@@ -88,7 +88,7 @@ counter++;
 
 console.log(counter);
 
-//Her miuser vi tilbake til 0 ved å bruke -- 2 ganger.
+//Her minuser vi tilbake til 0 ved å bruke -- 2 ganger.
 counter--;
 counter--;
 
@@ -139,15 +139,9 @@ let userIsLoggedIn = true;
 let userIsBlocked = false;
 let goToPage = "/";
 
-if (userName === "" || userAge < 18 || userIsBlocked === true) {
+if (userName === "" || userAge < 18 || userIsBlocked) {
   console.log("Error");
-} else if (
-  (userName =
-    "Loketor" &&
-    userAge >= 18 &&
-    userIsLoggedIn === true &&
-    userIsBlocked === false)
-) {
+} else if (userName === "Loketor" && userIsLoggedIn) {
   console.log("You are logged in!");
   goToPage = "/home";
 }
